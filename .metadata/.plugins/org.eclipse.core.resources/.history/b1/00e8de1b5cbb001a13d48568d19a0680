@@ -1,0 +1,39 @@
+
+public class SelfNumber {
+
+	/*
+	 * 	n는 d(n)의 생성자
+	 *  33으로 시작한다면 다음 수는 33 + 3 + 3 = 39이고, 
+	 *  그 다음 수는 39 + 3 + 9 = 51, 
+	 *  다음 수는 51 + 5 + 1 = 57이다
+	 *  
+	 *  33은 39의 생성자이고, 39는 51의 생성자, 51은 57의 생성자
+	 *  
+	 *  셀프 넘버: 생성자가 없는 숫자
+	 *  10000보다 작거나 같은 셀프 넘버를 한 줄에 하나씩 출력
+	 * */
+	public static void main(String[] args) {
+		int iLength = 0;
+		int iNum;
+		for (int i = 1; i <= 10000; i++) {
+			iLength = (int)(Math.log10(i)+1);
+			
+			// 셀프넘버가 아닌 수 iNum
+			if(iLength==1) { // 1~9
+				iNum=i+(i%10);
+			} else if(iLength==2) { // 10 ~ 99
+				iNum=i+(i/10)+(i%10);
+			} else if(iLength==3) { //100 ~ 999
+				iNum=i+(i/100)+(i/10)+(i%10);
+			} else if(iLength==4) { //1000 ~ 9999
+				iNum=i+(i/1000)+(i/100)+(i/10)+(i%10);
+			} else { // 10000
+				iNum=i+(i/10000)+(i/1000)+(i/100)+(i/10)+(i%10);
+			}
+			
+			
+			
+		}
+	}
+
+}

@@ -1,0 +1,19 @@
+package Ch02;
+
+public class Ch02UniCode {
+
+	public static void main(String[] args) {
+		// char 형을 10진수로 변환
+		System.out.println((int)'A');
+		System.out.println((int)'a');
+		System.out.println((int)'가');
+		System.out.println((int)'나');
+		
+		// 10진수를 16진수 형태로 출력(유니코드 값 확인)
+		System.out.printf("%x\n",(int)'A');
+		System.out.printf("%x\n",(int)'a');
+		System.out.printf("%x\n",(int)'가');
+		System.out.printf("%x\n",(int)'나');
+	}
+
+}
