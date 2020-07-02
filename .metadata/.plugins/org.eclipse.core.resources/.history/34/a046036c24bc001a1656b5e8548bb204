@@ -1,0 +1,36 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class MostUsedAlphabet {
+
+	// 알파벳 대소문자로 된 단어가 주어지면, 
+	// 이 단어에서 가장 많이 사용된 알파벳이 무엇인지 알아내는 프로그램을 작성하시오. 
+	// 단, 대문자와 소문자를 구분하지 않는다.
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		String sInput = scan.next();
+		String[] sInputArray; 
+		String[][] sUsedAlphabet = {}; // 1차배열에는 알파벳, 2차 배열에는 알파벳 빈도
+		
+		sInputArray=sInput.split(""); // 한글자씩 배열에 넣기
+		
+		// 중복없이 사용한 알파벳 
+		// sUsedAlphabet 배열에 넣기
+		for (int i = 0; i < sInputArray.length; i++) {
+			for (int j = 0; j < sUsedAlphabet.length; ) {
+				// 해당 알파벳이 sUsedAlphabet 배열안에 없을 경우 삽입
+				// equalsIgnoreCase: 대소문자 구분없이 비교
+				int k = 0;
+				if(!(sInputArray[i].equalsIgnoreCase(sUsedAlphabet[0][j]))) {
+					sUsedAlphabet[0][k]= sInputArray[i];	
+					k++;
+				}
+			}
+		}
+		for (int i = 0; i < sUsedAlphabet.length; i++) {
+
+			System.out.print(sUsedAlphabet[i]);
+		}
+	}
+
+}
