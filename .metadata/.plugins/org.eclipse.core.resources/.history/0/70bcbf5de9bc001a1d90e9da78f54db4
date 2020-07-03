@@ -1,0 +1,16 @@
+
+public class LargestNumber {
+
+	/*
+	 *  상근이의 동생인 상수는 숫자를 읽는데 문제가 있다
+	 *  734와 893을 칠판에 적었다면, 상수는 이 수를 437과 398로 읽는다
+	 *  따라서, 상수는 두 수중 큰 수인 437을 큰 수라고 말할 것이다.
+	 *  
+	 *  숫자는 세자리 수
+	 * */
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+
+	}
+
+}
