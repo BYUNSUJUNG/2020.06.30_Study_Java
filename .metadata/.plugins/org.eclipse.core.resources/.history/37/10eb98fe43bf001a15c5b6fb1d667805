@@ -1,0 +1,17 @@
+import java.util.Scanner;
+
+public class FibonacciNum {
+	static Scanner scan = new Scanner(System.in);
+	static int iNum = scan.nextInt();
+	
+	public static void main(String[] args) {
+		System.out.println(FibonacciMethod(iNum));
+	}
+	static int FibonacciMethod(int iNum) {
+		if(iNum<2) {
+			return iNum;
+		} else {
+			return  FibonacciMethod(iNum-1) + FibonacciMethod(iNum-2);
+		}
+	}
+}

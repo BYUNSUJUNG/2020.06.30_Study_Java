@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+public class Factorial {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		int iNum = scan.nextInt();
+		factorialMethod(iNum);
+
+	}
+	
+	static void factorialMethod(int iNum) {
+		iNum = iNum*factorialMethod(iNum-1);
+		
+		
+	}
+
+}
