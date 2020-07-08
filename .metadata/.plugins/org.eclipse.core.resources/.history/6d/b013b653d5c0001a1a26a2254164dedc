@@ -1,0 +1,13 @@
+package Ch09;
+
+// 오버로딩
+public class C01MethodOverMain {
+	public static void main(String[] args) {
+		C01MethodOver t1 = new C01MethodOver();
+		C01MethodOver t2 = new C01MethodOver();
+		
+		t1.x=10;
+		System.out.println(t1.sum(5));
+		System.out.println(t2.sum(5,20));
+	}
+}

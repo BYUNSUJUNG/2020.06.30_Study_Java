@@ -1,0 +1,27 @@
+package Ch09;
+
+class BirthDay {
+	// 필드
+	int day;
+	int month;
+	int year;
+	
+	// 메서드
+	public void setYear(int year) {
+		this.year = year;
+		
+	}
+	
+	public void printThis() {
+		System.out.println(this);
+	}
+}
+
+public class C04this {
+	public static void main(String[] args) {
+		BirthDay bDay = new BirthDay();
+		bDay.setYear(2000);
+		System.out.println(bDay);
+		bDay.printThis();
+	}
+}

@@ -1,0 +1,29 @@
+package Ch09;
+
+class MemberServer {
+	String id;
+	String password;
+	
+	public void login(String id, String password) {
+		this.id = id;
+		this.password = password;
+	}
+	public void logout(String id) {
+		this.id = id;
+	}
+}
+
+public class MemberServerMain {
+	public static void main(String[] args) {
+		MemberServer ms = new MemberServer();
+	}
+}
+
+/*
+public class C06Practice {
+	public static void main(String[] args) {
+		
+	}
+}
+*/
+

@@ -1,0 +1,21 @@
+package Ch09;
+
+// 오버로딩
+public class C01MethodOver {
+	int x;
+	int y;
+	
+	// public: 어느 객체든 접근가능
+	// private: 내부에서만 접근가능
+	
+	public int sum(int num) {
+		this.y = num;
+		return x+y;
+	}
+	
+	public int sum(int n1, int n2) {
+		this.x = n1;
+		this.y = n2;
+		return x+y;
+	}
+}

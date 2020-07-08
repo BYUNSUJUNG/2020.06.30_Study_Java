@@ -10,4 +10,10 @@
 <fullyQualifiedTypeName name="java.io.BufferedWriter"/>
 <fullyQualifiedTypeName name="java.io.OutputStreamWriter"/>
 <fullyQualifiedTypeName name="Ch08.C02ClassMethod"/>
+<fullyQualifiedTypeName name="Ch09.C01MethodOver"/>
+<fullyQualifiedTypeName name="Ch08.C03Construct"/>
+<fullyQualifiedTypeName name="Ch09.C02ConstOver"/>
+<fullyQualifiedTypeName name="Ch09.C03Point"/>
+<fullyQualifiedTypeName name="Ch09.BirthDay"/>
+<fullyQualifiedTypeName name="Ch09.MemberServer"/>
 </qualifiedTypeNameHistroy>
