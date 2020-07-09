@@ -1,0 +1,11 @@
+package Ch10;
+
+public class C01StringClass {
+	public static void main(String[] args) {
+		String str1 = "java";
+		String str2 = "java";
+		
+		String myStr3 = new String("java");
+		String myStr4 = new String("java"); 
+	}
+}

@@ -1,0 +1,33 @@
+package Ch09;
+
+class MemberServer {
+	String id;
+	String password;
+	
+	// login
+	public boolean login(String id, String password) {
+		this.id = id;
+		this.password = password;
+		
+		// id가 hong이고 password가 12345이면 true를 반환
+		if(id.equals("hong")&&password.equals("12345")) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+	
+	// logout
+	public void logout(String id) {
+		this.id = id;
+	}
+}
+
+public class C07MemberServerMain {
+	public static void main(String[] args) {
+		// 객체 생성
+		MemberServer ms = new MemberServer();
+		System.out.println(ms.login("hong","12345")); // true
+		System.out.println(ms.login("han","123")); // false
+	}
+}
