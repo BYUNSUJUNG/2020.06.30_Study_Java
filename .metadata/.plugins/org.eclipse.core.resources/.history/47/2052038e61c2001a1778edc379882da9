@@ -1,0 +1,23 @@
+package Ch11;
+import java.util.ArrayList;
+
+public class C10ArrayList {
+
+	public static void main(String[] args) {
+		
+		ArrayList<C07Book> library = new ArrayList<C07Book>();
+		
+		library.add(new C07Book("태백산맥","조정래"));
+		library.add(new C07Book("데미안","헤르만 헤세"));
+		library.add(new C07Book("토지","박경리"));
+		library.add(new C07Book("어린왕자","생택쥐페리"));
+		
+		for( int i = 0; i< library.size();i++) {
+			C07Book book = library.get(i);
+			book.showBookInfo();
+		}
+		System.out.println();
+
+	}
+
+}

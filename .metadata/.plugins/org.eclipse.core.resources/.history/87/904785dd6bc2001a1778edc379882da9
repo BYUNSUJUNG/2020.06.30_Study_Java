@@ -1,0 +1,13 @@
+package Ch12;
+
+// ½Ì±ÛÅæ ÆĞÅÏ
+public class C07Company {
+	private static C07Company instance = new C07Company();
+	private C07Company() {}
+	
+	public static C07Company getInstance(){
+		if (instance==null) {
+			instance = new C07Company();
+		}
+		return instance; // °´Ã¼ÀÇ ÁÖ¼Ò°ª ¹İÈ¯
+}

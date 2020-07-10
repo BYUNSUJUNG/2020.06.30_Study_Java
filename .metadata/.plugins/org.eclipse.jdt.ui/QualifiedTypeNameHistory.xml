@@ -16,4 +16,8 @@
 <fullyQualifiedTypeName name="Ch09.BirthDay"/>
 <fullyQualifiedTypeName name="Ch09.MemberServer"/>
 <fullyQualifiedTypeName name="java.util.Scanner"/>
+<fullyQualifiedTypeName name="Ch12.C01StaticVariable"/>
+<fullyQualifiedTypeName name="Ch12.C02Student"/>
+<fullyQualifiedTypeName name="Ch12.C04Student"/>
+<fullyQualifiedTypeName name="Ch12.C07Company"/>
 </qualifiedTypeNameHistroy>

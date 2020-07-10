@@ -1,0 +1,27 @@
+package Ch11;
+
+public class C09ArrObjectCopy {
+
+	public static void main(String[] args) {
+		
+		C07Book[ ]bookArray1 = new C07Book[3];
+		C07Book[ ]bookArray2 = new C07Book[3];
+
+		bookArray1[0] = new C07Book("태백산맥","조정래");
+		bookArray1[1] = new C07Book("헤르만 헤세","데미안");
+		bookArray1[2] = new C07Book("어떻게 살 것인가","유시민");
+	
+		bookArray2[0]= new C07Book();
+		bookArray2[1]= new C07Book();
+		bookArray2[2]= new C07Book();
+		
+		for(int i=0; i<bookArray2.length;i++)
+		{
+			bookArray2[i].setBookName(bookArray1[i].getBookName());
+			bookArray2[i].setAuthor(bookArray1[i].getBookName());
+		}
+		
+		for(int i=0; i<bookArray2.length;i++)
+			bookArray2[i].showBookInfo();
+	}
+}

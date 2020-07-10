@@ -1,0 +1,9 @@
+package Ch12;
+
+public class C07CompanyTest {
+	public static void main(String[] args) {
+		C07Company myCompany1 = C07Company.getInstance();
+		C07Company myCompany2 = C07Company.getInstance();
+		System.out.println(myCompany1 == myCompany2);
+	}
+}
