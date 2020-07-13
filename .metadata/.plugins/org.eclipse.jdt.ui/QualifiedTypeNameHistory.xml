@@ -20,4 +20,15 @@
 <fullyQualifiedTypeName name="Ch12.C02Student"/>
 <fullyQualifiedTypeName name="Ch12.C04Student"/>
 <fullyQualifiedTypeName name="Ch12.C07Company"/>
+<fullyQualifiedTypeName name="Ch12.C09Final"/>
+<fullyQualifiedTypeName name="Ch13.Point3D"/>
+<fullyQualifiedTypeName name="Ch13.C02CellPhone"/>
+<fullyQualifiedTypeName name="Ch13.C02DmCellPhone2"/>
+<fullyQualifiedTypeName name="Ch13.Parent"/>
+<fullyQualifiedTypeName name="Ch13.C04People"/>
+<fullyQualifiedTypeName name="Ch13.C04Student"/>
+<fullyQualifiedTypeName name="Ch13.C05Child"/>
+<fullyQualifiedTypeName name="Ch13.C05Parent"/>
+<fullyQualifiedTypeName name="Ch13.C06Car"/>
+<fullyQualifiedTypeName name="Ch13.C06SuperCar"/>
 </qualifiedTypeNameHistroy>
