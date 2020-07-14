@@ -3,11 +3,6 @@
 <fullyQualifiedTypeName name="java.awt.List"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="java.lang.reflect.Array"/>
-<fullyQualifiedTypeName name="java.util.Arrays"/>
-<fullyQualifiedTypeName name="java.io.InputStreamReader"/>
-<fullyQualifiedTypeName name="java.io.BufferedReader"/>
-<fullyQualifiedTypeName name="java.io.BufferedWriter"/>
-<fullyQualifiedTypeName name="java.io.OutputStreamWriter"/>
 <fullyQualifiedTypeName name="Ch08.C02ClassMethod"/>
 <fullyQualifiedTypeName name="Ch09.C01MethodOver"/>
 <fullyQualifiedTypeName name="Ch08.C03Construct"/>
@@ -15,7 +10,6 @@
 <fullyQualifiedTypeName name="Ch09.C03Point"/>
 <fullyQualifiedTypeName name="Ch09.BirthDay"/>
 <fullyQualifiedTypeName name="Ch09.MemberServer"/>
-<fullyQualifiedTypeName name="java.util.Scanner"/>
 <fullyQualifiedTypeName name="Ch12.C01StaticVariable"/>
 <fullyQualifiedTypeName name="Ch12.C02Student"/>
 <fullyQualifiedTypeName name="Ch12.C04Student"/>
@@ -31,4 +25,13 @@
 <fullyQualifiedTypeName name="Ch13.C05Parent"/>
 <fullyQualifiedTypeName name="Ch13.C06Car"/>
 <fullyQualifiedTypeName name="Ch13.C06SuperCar"/>
+<fullyQualifiedTypeName name="Ch13.C07Tablet"/>
+<fullyQualifiedTypeName name="java.io.BufferedReader"/>
+<fullyQualifiedTypeName name="java.io.InputStreamReader"/>
+<fullyQualifiedTypeName name="java.io.OutputStreamWriter"/>
+<fullyQualifiedTypeName name="java.io.BufferedWriter"/>
+<fullyQualifiedTypeName name="java.util.Scanner"/>
+<fullyQualifiedTypeName name="java.util.Arrays"/>
+<fullyQualifiedTypeName name="Ch14.C04MoonBanggu"/>
+<fullyQualifiedTypeName name="java.awt.font.ShapeGraphicAttribute"/>
 </qualifiedTypeNameHistroy>

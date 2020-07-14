@@ -1,0 +1,58 @@
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Math {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		
+		// 수 개수 입력
+		int iCnt = scan.nextInt();
+		// 수가 들어갈 배열
+		int[] iNum = new int[iCnt];
+		
+		int iSum=0;
+		int iAvg;
+		
+		int iMedian; // 중앙값
+		int iMode; // 최빈값
+		
+		int[] iIndex = new int[iCnt]; //인덱스의 카운터
+		int iMax = Integer.MIN_VALUE; //최대값을 저장하기위한 변수 
+		
+		int iMaxNum; // 최댓값
+		int iMinNum; // 최솟값
+		 
+		// 수 입력
+		for (int i = 0; i < iNum.length; i++) {
+			iNum[i] = scan.nextInt();
+			iSum+=iNum[i]; // 1. 산술평균을 구하기 위한 iSum
+		}
+		
+		// 2. 중앙값 구하기
+		Arrays.sort(iNum);//오름차순 정렬
+
+        int size = iNum.length;
+
+        iMedian = iNum[size / 2];
+
+        // 3. 최빈값 구하기
+
+        for (int i = 0; i < iNum.length; i++) {
+            iIndex[iNum[i]]++; //COUNT          
+        }
+        for (int i=0; i< iIndex.length; i++){
+            if(iMax<iIndex[i]){
+                iMax = iIndex[i]; //MAX
+                iMode = i; //최빈값 : MODE
+            }          
+        }      
+        
+        
+		// 출력
+		for (int i = 0; i < iNum.length; i++) {
+			System.out.println(iNum[i]);
+		}
+	}
+
+}

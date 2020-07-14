@@ -1,0 +1,11 @@
+package Ch14;
+
+public class C04Sharpen {
+	
+	public C04Sharpen() {
+		SharpenCount--;
+	}
+	void write() {
+		System.out.println("»þÇÁ¸¦ ¾¹½Ã´Ù");
+	}
+}
