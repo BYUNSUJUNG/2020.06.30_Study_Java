@@ -1,0 +1,5 @@
+package Ch15;
+
+public class C01PhoneExample extends C01Phone {
+	// C01Phone phone = new C01Phone();
+}

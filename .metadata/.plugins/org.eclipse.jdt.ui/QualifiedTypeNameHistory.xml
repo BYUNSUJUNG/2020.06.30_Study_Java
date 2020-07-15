@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="java.awt.List"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="java.lang.reflect.Array"/>
 <fullyQualifiedTypeName name="Ch08.C02ClassMethod"/>
 <fullyQualifiedTypeName name="Ch09.C01MethodOver"/>
@@ -34,4 +33,15 @@
 <fullyQualifiedTypeName name="java.util.Arrays"/>
 <fullyQualifiedTypeName name="Ch14.C04MoonBanggu"/>
 <fullyQualifiedTypeName name="java.awt.font.ShapeGraphicAttribute"/>
+<fullyQualifiedTypeName name="Ch15.C01Phone"/>
+<fullyQualifiedTypeName name="Ch15.C02Cat"/>
+<fullyQualifiedTypeName name="Ch15.C02Dog"/>
+<fullyQualifiedTypeName name="Ch15.C02Animal"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="Ch16.C01Audio"/>
+<fullyQualifiedTypeName name="java.util.Collections"/>
+<fullyQualifiedTypeName name="Ch16.C01RemoteControl"/>
+<fullyQualifiedTypeName name="Ch16.C02Searchable"/>
+<fullyQualifiedTypeName name="Ch16.C02SmartTV"/>
+<fullyQualifiedTypeName name="Ch16.C03MyClass"/>
 </qualifiedTypeNameHistroy>
