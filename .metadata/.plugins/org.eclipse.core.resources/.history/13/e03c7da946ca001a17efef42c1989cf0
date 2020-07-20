@@ -1,0 +1,15 @@
+package Ch20;
+
+public class C05StringConcatTest {
+	public static void main(String[] args) {
+		String javaStr1 = new String("JAVA");
+		String javaStr2 = new String("ANDROID");
+		System.out.println(javaStr1);
+		
+		javaStr1 = javaStr1.concat(javaStr2);
+		System.out.println(javaStr1);
+		
+		
+		
+	}
+}

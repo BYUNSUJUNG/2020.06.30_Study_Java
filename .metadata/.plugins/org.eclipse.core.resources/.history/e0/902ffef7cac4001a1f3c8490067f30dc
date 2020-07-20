@@ -1,9 +1,0 @@
-package Ch13;
-
-public class C05Child extends C05Parent {
-	public String StudentNo;
-	public C05Child(String name, int studentNo ) {
-		this.name = name;
-		this.studentNo = studentNo;
-	}
-}

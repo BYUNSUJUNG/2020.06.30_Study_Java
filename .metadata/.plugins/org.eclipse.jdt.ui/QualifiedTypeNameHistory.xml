@@ -44,4 +44,12 @@
 <fullyQualifiedTypeName name="Ch16.C02Searchable"/>
 <fullyQualifiedTypeName name="Ch16.C02SmartTV"/>
 <fullyQualifiedTypeName name="Ch16.C03MyClass"/>
+<fullyQualifiedTypeName name="Ch20.ObjTestA"/>
+<fullyQualifiedTypeName name="java.lang.CloneNotSupportedException"/>
+<fullyQualifiedTypeName name="java.lang.StringBuilder"/>
+<fullyQualifiedTypeName name="java.lang.StringBuffer"/>
+<fullyQualifiedTypeName name="Ch20.C08Car"/>
+<fullyQualifiedTypeName name="java.lang.reflect.Constructor"/>
+<fullyQualifiedTypeName name="java.lang.reflect.Field"/>
+<fullyQualifiedTypeName name="java.lang.reflect.Method"/>
 </qualifiedTypeNameHistroy>

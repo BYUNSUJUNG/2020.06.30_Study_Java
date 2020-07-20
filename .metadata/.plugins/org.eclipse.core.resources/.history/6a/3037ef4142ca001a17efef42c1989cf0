@@ -1,0 +1,19 @@
+package Ch20;
+
+
+class People {
+	String name;
+	int age;
+	
+	public People(String name, int age) {
+		this.name = name;
+		this.age = age;
+	}
+}
+public class C03Practice {
+	public static void main(String[] args) {
+		People Kim = new People("±ËªÛ¡ﬂ",30);
+		People Lee = new People("¿Ã∞ÊπŒ",30);
+		People Son = new People("º’ºÆ»Ò",30);
+	}
+}

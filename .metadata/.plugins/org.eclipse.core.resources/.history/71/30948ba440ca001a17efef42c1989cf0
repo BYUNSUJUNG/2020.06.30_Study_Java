@@ -1,0 +1,33 @@
+package Ch20;
+
+class ObjTestA {
+	int x;
+	ObjTestA(){};
+	public ObjTestA(int a) {
+		this.x = a; 
+	}
+	public int hashCode() {
+		return x;
+	}
+}
+
+public class C02HashCodeTest {
+	public static void main(String[] args) {
+		ObjTestA obj1 = new ObjTestA(12);
+		ObjTestA obj2 = new ObjTestA(12);
+		ObjTestA obj3 = new ObjTestA(56);
+		
+		System.out.println(obj1);
+		System.out.println(obj2);
+		System.out.println(obj3);
+		
+		System.out.println(obj1.hashCode());
+		System.out.println(obj2.hashCode());
+		System.out.println(obj3.hashCode());
+		
+		System.out.println(System.identityHashCode(obj1));
+		System.out.println(System.identityHashCode(obj2));
+		System.out.println(System.identityHashCode(obj3));
+		
+	}
+}

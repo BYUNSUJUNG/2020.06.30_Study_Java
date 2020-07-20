@@ -1,0 +1,25 @@
+package Ch17;
+//캡슐화
+//캡슐화는 정보은닉을 수반한다
+//엔진의 동작원리 : 흡입 -> 압축 -> 폭발 -> 배기
+public class C01Car {
+	private void Induction() {
+		System.out.println("가솔린 + 공기흡입");
+	}
+	private void Compress() {
+		System.out.println("흡기밸브 닫힘과 동시에 피스톤 상승");
+	}
+	private void Power() {
+		System.out.println("피스톤 하강과 동시에 폭발");
+	}
+	private void Exhaust() {
+		System.out.println("배기밸브 오픈, 배기가스 빠져나옴");
+	}
+	protected void Enginstart()
+	{
+		Induction();
+		Compress();
+		Power();
+		Exhaust();
+	}
+}

@@ -1,0 +1,15 @@
+package Ch18;
+
+public class C03VehicleExample {
+	public static void main(String[] args) {
+		C03Vehicle vehicle = new C03Bus();
+
+		vehicle.run();
+		vehicle.checkFare(); //(x)
+
+		C03Bus bus = (C03Bus) vehicle;  //강제 타입변환
+
+		bus.run();
+		bus.checkFare();
+	}
+}

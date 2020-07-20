@@ -1,0 +1,12 @@
+package Ch20;
+class C08Car {
+	
+}
+
+public class C08ClassTest {
+	public static void main(String[] args) {
+		Class cls = Ch20.C08Car.class;
+		
+		System.out.println(cls.getName());
+	}
+}

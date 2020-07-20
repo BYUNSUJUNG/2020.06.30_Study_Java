@@ -1,0 +1,55 @@
+package Ch20;
+
+class ObjTestA {
+	int x;
+	ObjTestA(){};
+	public ObjTestA(int a) {
+		this.x = a; 
+	}
+	// hashCode 오버라이딩
+	public int hashCode() {
+		return x;
+	}
+	
+	
+	public boolean equals(Object obj) {
+		// 업캐스팅
+		if(obj instanceof ObjTestA) {
+			// 다운 캐스팅
+			ObjTestA tmp = (ObjTestA)obj;
+			if(this.x==tmp.x)
+				return true;
+			else 
+				return false;
+		}
+		return false;
+	}
+}
+
+public class C02HashCodeTest {
+	public static void main(String[] args) {
+		// 객체 생성
+		ObjTestA obj1 = new ObjTestA(12);
+		ObjTestA obj2 = new ObjTestA(12);
+		ObjTestA obj3 = new ObjTestA(56);
+		
+		System.out.println(obj1);
+		System.out.println(obj2);
+		System.out.println(obj3);
+		
+		// 자바 가상머신에 의해 부여된 객체의 정보 확인
+		System.out.println(obj1.hashCode());
+		System.out.println(obj2.hashCode());
+		System.out.println(obj3.hashCode());
+		// Equals 메서드로 동등객체 여부 확인
+		// 실제 해쉬코드가 각각 다르기에 다 false
+		System.out.println(obj1.equals(obj2));
+		System.out.println(obj1.equals(obj3));
+		System.out.println(obj2.equals(obj3));
+		// identityHashCode()
+		System.out.println(System.identityHashCode(obj1));
+		System.out.println(System.identityHashCode(obj2));
+		System.out.println(System.identityHashCode(obj3));
+		
+	}
+}
