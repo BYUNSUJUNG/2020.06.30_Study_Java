@@ -1,6 +1,5 @@
 package Ch20;
-
-// Wrapper클래스 - Integer
+//Wrapper클래스 - Integer
 public class C10WrapperClass {
 	public static void main(String[] args) {
 		// Boxing

@@ -1,7 +1,0 @@
-package Ch14;
-
-public class C04Sharpen {
-	void write() {
-		System.out.println("연필를 씁시다");
-	}
-}

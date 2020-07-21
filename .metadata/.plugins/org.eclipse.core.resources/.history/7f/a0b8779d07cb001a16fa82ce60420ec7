@@ -73,7 +73,7 @@ public class Statistics {
         }
         
 		iMaxList.add(iNum[iMode]); // 최빈수에 해당하는 숫자
-		/*
+		
         // 최빈값이 여러개일 경우 찾기
         for (int j = 0; j < iIndex.length; j++) {
         	if(iMode==iIndex[j]) {
@@ -82,7 +82,7 @@ public class Statistics {
                 		iMaxList.add(iNum[j]);
         		}
         	}
-		}*/
+		}
         if(iMaxList.size()>1) {
         	Collections.sort(iMaxList);
         	iMode = (int) iMaxList.get(1);

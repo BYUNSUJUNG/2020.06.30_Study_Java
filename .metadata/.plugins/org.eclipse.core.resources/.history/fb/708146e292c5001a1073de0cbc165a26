@@ -1,7 +1,0 @@
-package Ch14;
-
-public class C04Pencil extends C04MoonBanggu {
-	void write() {
-		System.out.println("»þÇÁ¸¦ ¾¹½Ã´Ù");
-	}
-}
