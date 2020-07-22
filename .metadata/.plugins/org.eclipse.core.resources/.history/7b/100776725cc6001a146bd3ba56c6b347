@@ -1,5 +1,0 @@
-package Ch16;
-
-public class C02SmartTV implements C01RemoteControl, C02Searchable{
-
-}

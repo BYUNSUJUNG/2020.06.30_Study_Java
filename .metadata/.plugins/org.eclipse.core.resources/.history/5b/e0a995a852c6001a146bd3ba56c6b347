@@ -1,8 +1,0 @@
-package Ch15;
-
-public class C01PhoneExample {
-	// 추상 클래스는 객체를 못만든다.
-	// C01Phone phone = new C01Phone();
-	C01SmartPhone Smart;
-	Smart = new C01SmartPhone();
-}

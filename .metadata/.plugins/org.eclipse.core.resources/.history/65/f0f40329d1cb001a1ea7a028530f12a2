@@ -1,0 +1,11 @@
+package Ch22;
+
+public class C01NullPoinertException {
+	public static void main(String[] args) {
+		String data = null;
+		System.out.println(data.toString());
+		
+
+		System.out.println("예외발생 이후 출력!!");
+	}
+}
