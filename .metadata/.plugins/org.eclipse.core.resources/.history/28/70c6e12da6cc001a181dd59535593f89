@@ -1,0 +1,6 @@
+package Ch24;
+
+public class C05Member {
+	String name;
+	int age;
+}

@@ -1,5 +1,0 @@
-package Ch18;
-
-public interface C05InterfaceC extends C05InterfaceA,C05InterfaceB{
-	public void methodC();
-}
