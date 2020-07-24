@@ -20,6 +20,7 @@ public class C05HashSetTest {
 		
 		set.remove("JDBC");
 		
+		// 인덱스가 없어서 반복자를 사용하여 출력
 		Iterator<String> iterator = set.iterator();
 		String tmp = null;
 		while (iterator.hasNext()) {

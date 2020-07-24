@@ -1,0 +1,31 @@
+package Ch24;
+
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Set;
+
+public class C09HashMapTest {
+	public static void main(String[] args) {
+		Map<C09Student,Integer> map = new HashMap();
+		
+		map.put(new C09Student("È«±æµ¿",1010),99);
+		map.put(new C09Student("Á¤¿ì±Õ",2020),80);
+		map.put(new C09Student("ÀÌÁö¼º",3030),70);
+		
+		System.out.println("ÃÑ Entry ¼ö: "+map.size());
+		
+		Set<C09Student> keyset = map.keySet();
+		Iterator<C09Student> iterator = keyset.iterator();
+		C09Student tmpKey;
+		Integer tmpval;
+		
+		while (iterator.hasNext()) {
+			tmpKey = iterator.next();
+			tmpval = map.get(tmpKey);
+					
+			System.out.println(tmpKey+","+tmpval);
+		}
+		System.out.println();
+	}
+}

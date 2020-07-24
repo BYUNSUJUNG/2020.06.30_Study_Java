@@ -13,6 +13,7 @@ public class C06HashSetTest {
 		
 		// 객체 동등비교
 		// 반복자
+		// 인덱스가 없어서 반복자를 사용하여 출력
 		Iterator<C06Member> iterator = set.iterator();
 		ArrayList <C06Member> list = new ArrayList();
 		
