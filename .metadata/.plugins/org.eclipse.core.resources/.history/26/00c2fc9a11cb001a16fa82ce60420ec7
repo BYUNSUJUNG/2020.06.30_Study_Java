@@ -1,7 +1,0 @@
-package Ch21;
-
-public class C02Calender {
-	public static void main(String[] args) {
-		
-	}
-}

@@ -1,0 +1,37 @@
+package Ch26;
+
+import java.io.*;
+
+public class C01SubClassStream {
+	public static void main(String[] args) {
+		
+		String str = "문자 변환 스트림 사용";
+		try {
+			OutputStream out = new FileOutputStream("c:/temp/test10.txt");
+			// OutputStreamWriter(): 바이트 출력 스트림 -> 문자 출력 스트림 변봔
+			// OutputStreamReader(): 바이트 입력 스트림 -> 문자 입력 스트림 변봔
+			
+			Writer Cout = new OutputStreamWriter(out);
+			Cout.write(str);
+			Cout.flush();
+			Cout.close();
+			
+			InputStream in = new FileInputStream("c:/temp/test10.txt");
+			Reader Cin = new InputStreamReader(in);
+		
+			char[] buffer = new char[100];
+			int readNum = 0;
+			while(true) {
+				readNum = Cin.read(buffer);
+				if(readNum==-1) break;
+				System.out.println(buffer);
+			}
+			Cin.close();
+			
+			
+			
+		} catch (Exception e) {
+			
+		}
+	}
+}
