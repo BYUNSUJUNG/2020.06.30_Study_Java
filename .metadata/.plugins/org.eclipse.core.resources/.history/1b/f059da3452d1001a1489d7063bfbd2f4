@@ -1,0 +1,16 @@
+package Ch27;
+
+// ½º·¹µå
+public class C02Thread {
+	public static void main(String[] args) {
+		
+		C02Task task = new C02Task();
+		Thread th = new Thread(task);
+		th.start();
+		
+		for (int i = 0; i < 5; i++) {
+			System.out.println("Main Thread");
+			try {Thread.sleep(500);} catch(Exception e) {};
+		}
+	}
+}

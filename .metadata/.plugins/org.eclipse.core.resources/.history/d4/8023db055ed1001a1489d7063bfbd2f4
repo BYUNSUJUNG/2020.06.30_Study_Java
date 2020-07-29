@@ -1,0 +1,17 @@
+package Ch28;
+
+import Ch27.C02Task2;
+import Ch27.C02Task3;
+
+// 스레드
+public class C02MainThread {
+	public static void main(String[] args) {
+		C02ThreadExit task = new C02ThreadExit();
+		Thread th = new Thread(task);
+		th.start();
+		
+		try {Thread.sleep(500);} catch(Exception e) {};
+		System.out.println("스레드 종료를 원하는 시점");
+		task.stop = true;
+	}
+}

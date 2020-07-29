@@ -1,0 +1,18 @@
+package Ch28;
+
+class C01Memory {
+	private int num;
+	private int getNum() {
+		return num;
+	}
+	public void setNum(int num) {
+		this.num = num;
+		System.out.println(this.num);
+	}
+}
+// ½º·¹µå
+public class C01MainThread {
+	public static void main(String[] args) {
+	
+	}
+}
