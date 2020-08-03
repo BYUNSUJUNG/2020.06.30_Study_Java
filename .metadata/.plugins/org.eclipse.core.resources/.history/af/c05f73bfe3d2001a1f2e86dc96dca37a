@@ -1,0 +1,23 @@
+package Ch29;
+
+import javax.swing.*;
+
+public class C07SwingaddThread extends JFrame {
+	
+	JPanel pl;
+	JButton bnt1;
+	TextField txt1;
+	JTextArea area1;
+	
+	C07SwingaddThread() {
+		super("스레드를 동작시키는 프레임 창");
+		
+		pl.setLayout(null);
+		setSize(500,500);
+		serVisible(true);
+	}
+	
+	public static void main(String[] args) {
+		
+	}
+}

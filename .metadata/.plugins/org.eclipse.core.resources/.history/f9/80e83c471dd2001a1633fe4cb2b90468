@@ -1,0 +1,32 @@
+package Ch29;
+
+import java.awt.*;
+
+import javax.swing.*;
+
+public class C03SwingPanel extends JFrame {
+	
+	JButton btn1, btn2, btn3;
+	
+	public C03SwingPanel() {
+		
+		super("세번째 프레임 창입니다");
+		JPanel pl = new JPanel();
+		// 배경색 지정
+		pl.setBackground(Color.BLUE);
+		
+		 btn1 = new Button("버튼1");
+		 btn2 = new Button("버튼2");
+		 btn3 = new Button("버튼3");
+		
+		add(pl);
+		setSize(500,500);
+		setVisible(true);
+	}
+	public static void main(String[] args) {
+
+		// 자바 프레임 창 생성
+		new C03SwingPanel();
+		
+	}
+}

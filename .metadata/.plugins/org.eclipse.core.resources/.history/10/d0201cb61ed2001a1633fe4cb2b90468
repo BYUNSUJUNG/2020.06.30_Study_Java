@@ -1,0 +1,37 @@
+package Ch29;
+
+import java.awt.*;
+
+import javax.swing.*;
+
+public class C04SwingTextField extends JFrame {
+	
+	public C04SwingTextField() {
+		
+		super("네번째 프레임 창입니다");
+		// 패널 생성
+		JPanel pl = new JPanel();
+		// 배경색 지정
+		pl.setBackground(Color.ORANGE);
+				
+		JLabel lb1 = new JLabel("아이디: ");
+		JLabel lb2 = new JLabel("비밀번호: ");
+		
+							
+		TextField txt1 = new TextField("ID",20);
+		TextField txt2 = new TextField("PW",20);
+		pl.add(lb1);
+		pl.add(lb2);
+		pl.add(txt1);
+		pl.add(txt2);
+		add(pl);
+		setSize(500,500);
+		setVisible(true);
+	}
+	public static void main(String[] args) {
+
+		// 자바 프레임 창 생성
+		new C04SwingTextField();
+		
+	}
+}
