@@ -1,0 +1,144 @@
+package Ch31;
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JTextArea;
+import java.awt.BorderLayout;
+import javax.swing.JScrollPane;
+import javax.swing.JTextField;
+import java.awt.GridLayout;
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
+import java.net.Socket;
+import java.util.Scanner;
+
+public class C099ChatClient {
+
+	private JFrame frame;
+	private JTextField textField;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					C099ChatClient window = new C099ChatClient();
+					window.frame.setVisible(true);
+					
+					Socket client = new Socket("192.168.3.10",7777); // 소켓생성
+					
+					C099ClientSendThread send = new C099ClientSendThread(); // 송신용 스레드 객체 생성
+					C099ClientRecvThread recv = new C099ClientRecvThread(); // 수신용 스레드 객체 생성
+					
+					send.setSocket(client); // 클라이언트 스트림 생성을 위한 소켓 객체 주소 전달
+					recv.setSocket(client);
+					
+					Thread snd = new Thread(send); // 메인 스레드와 구별되는 공간에 스레드 저장
+					Thread rev = new Thread(recv);
+					
+					snd.start(); // 스레드 시작
+					rev.start();
+					
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+		
+				
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public C099ChatClient() {
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frame = new JFrame();
+		frame.setBounds(100, 100, 326, 328);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.getContentPane().setLayout(null);
+		
+		JScrollPane scrollPane = new JScrollPane();
+		scrollPane.setBounds(26, 10, 246, 209);
+		frame.getContentPane().add(scrollPane);
+		
+		JTextArea textArea = new JTextArea();
+		scrollPane.setViewportView(textArea);
+		
+		textField = new JTextField();
+		textField.setBounds(26, 243, 246, 21);
+		frame.getContentPane().add(textField);
+		textField.setColumns(10);
+	}
+}
+
+//(1) 메세지 보내는 역할 스레드
+class C099ClientSendThread implements Runnable{
+	
+	
+	Socket client;
+	
+	public void setSocket(Socket socket) { // 소켓 설정
+		client = socket;
+	}
+	
+	@Override
+	public void run() {
+		try {
+			DataOutputStream out = new DataOutputStream(client.getOutputStream());
+			String msg; // 보낼 메세지를 담음
+			Scanner sc = new Scanner(System.in); 
+			while(true) {
+				System.out.print("[나]:");
+				msg = sc.nextLine(); // 메세지 입력
+				if(msg.equals("quit")) { // 메세지의 내용이 quit일 경우 
+					System.out.println("연결종료");
+					System.exit(1); // 연결 종료
+				}
+				out.writeUTF(msg); // 입력한 메세지를 보냄
+				out.flush();
+			}
+			
+		} catch (Exception e) {}
+	
+	}
+	
+	
+}
+
+//(2) 메세지 받는 역할 스레드
+class C099ClientRecvThread implements Runnable {
+	
+	Socket client;
+	
+	public void setSocket(Socket socket) { // 소켓 설정
+		client = socket;
+	}
+
+	@Override
+	public void run() {
+		try {
+			DataInputStream in = new DataInputStream(client.getInputStream());
+			String msg; // 받을 메세지를 담음
+			while(true) {
+				msg = in.readUTF(); // 클라이언트가 보낸 메세지를 변수에 넣음
+				if(msg.equals("quit")) { // 메세지의 내용이 quit이면
+					System.out.println("연결종료");
+					System.exit(1); // 연결종료
+				}
+				System.out.println("[Server]: "+msg); // 메세지의 내용이 quit가 아니면 console에 print
+			}
+		} catch (Exception e) {}
+		
+	}
+
+}

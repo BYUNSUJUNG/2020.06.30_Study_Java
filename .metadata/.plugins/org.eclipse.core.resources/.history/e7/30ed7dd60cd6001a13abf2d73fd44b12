@@ -1,0 +1,30 @@
+package Ch31;
+
+import java.io.DataInputStream;
+import java.net.Socket;
+
+public class C01ClientRecvThread implements Runnable {
+	Socket client;
+	
+	public void setSocket(Socket socket) {
+		client = socket;
+	}
+
+	@Override
+	public void run() {
+		try {
+			DataInputStream in = new DataInputStream(client.getInputStream());
+			String msg;
+			while(true) {
+				msg = in.readUTF(); // 클라이언트가 보낸 메세지를 받음
+				if(msg.equals("quit")) {
+					System.out.println("연결종료");
+					System.exit(1);
+				}
+				System.out.println("[Client]: "+msg);
+			}
+		} catch (Exception e) {}
+		
+	}
+
+}
