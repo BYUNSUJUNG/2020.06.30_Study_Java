@@ -1,0 +1,31 @@
+package Ch32;
+
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
+import java.net.ServerSocket;
+import java.net.Socket;
+
+public class C01ServerBackground {
+	// 소켓 연결
+	// 데이터 수신
+	// 데이터 송신
+
+	ServerSocket server;
+	Socket client;
+	DataOutputStream out;
+	DataInputStream in;
+	
+	C01ServerUI gui;
+	void sertting(C01ServerUI ui) {
+		this.gui = ui;
+	}
+	
+	// 소켓연결 + 데이터수신 + 수신.Area.append 용도
+	void Conn() {
+		try {
+			server = new ServerSocket(7777);
+			client = server.accept();
+		} catch (Exception e) {}
+		
+	}
+}

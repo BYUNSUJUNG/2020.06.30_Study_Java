@@ -39,8 +39,8 @@ public class C099ChatClient implements ActionListener{
 					
 					Socket client = new Socket("192.168.3.10",7777); // 소켓생성
 					
-					C099ClientSendThread send = new C099ClientSendThread(); // 송신용 스레드 객체 생성
-					C099ClientRecvThread recv = new C099ClientRecvThread(); // 수신용 스레드 객체 생성
+					C01ClientSendThread send = new C01ClientSendThread(); // 송신용 스레드 객체 생성
+					C01ClientRecvThread recv = new C01ClientRecvThread(); // 수신용 스레드 객체 생성
 					
 					send.setSocket(client); // 클라이언트 스트림 생성을 위한 소켓 객체 주소 전달
 					recv.setSocket(client);

@@ -1,0 +1,51 @@
+package Ch32;
+
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
+import java.io.IOException;
+import java.net.ServerSocket;
+import java.net.Socket;
+
+public class C01ClientBackground {
+	// 소켓 연결
+	// 데이터 수신
+	// 데이터 송신
+
+	// ServerSocket server; //Client에서는 필요없음
+	Socket client;
+	DataInputStream in;
+	DataOutputStream out;
+	
+	C01ClientUI gui;
+	
+	void setting(C01ClientUI ui) {
+		this.gui = ui;
+	}
+	
+	// 소켓  접속 요청 + 스트림 형성  + 수신.Area.append 용도
+	void conn() {
+		try {
+			// 소켓 연결
+			// server = new ServerSocket(7777); //Client에서는 필요없음
+			client = new Socket("192.168.3.10",7777); 
+			
+			// 스트림형성
+			in = new DataInputStream(client.getInputStream());
+			out = new DataOutputStream(client.getOutputStream());
+			out.writeUTF("클라이언트 접속 완료\n");
+			
+			// 데이터 수신용 코드
+			while(in!=null) {
+
+				String msg = in.readUTF();
+				gui.appendMsg(msg); // C01ClientUI의 메소드 appendMsg()
+			}
+		} catch (Exception e) {}
+		
+	}
+	
+	// throws IOException : 이 메소드를 사용하는 곳에서 예외처리하도록 예외를 던짐
+	void sendMsg(String msg) throws IOException {
+		out.writeUTF("[Server]: "+msg);
+	}
+}
