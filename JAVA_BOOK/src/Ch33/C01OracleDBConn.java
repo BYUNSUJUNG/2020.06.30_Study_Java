@@ -2,6 +2,7 @@ package Ch33;
 
 import java.sql.*;
 
+// select
 public class C01OracleDBConn {
 	public static void main(String[] args) throws SQLException {
 		// DB 연결 정보 저장
@@ -10,10 +11,10 @@ public class C01OracleDBConn {
 		String user="hr";
 		String password="hr";
 		
-		String sql; // sql저장용
-		PreparedStatement pstmt = null; // sql 명령을 담을 공간 -> 전달
-		ResultSet rs = null; // sql결과를 저장할 용도
-		Connection conn = null; // db연결 객체 참조 값 저장
+		String sql; // sql저장용(쿼리 임시저장)
+		PreparedStatement pstmt = null; // sql 명령을 담을 공간 (쿼리 저장) -> 전달
+		ResultSet rs = null; // sql결과를 저장할 용도(쿼리 결과 저장)
+		Connection conn = null; // db연결 객체 참조 값 저장(db연결 객체 저장)
 		 
 		try {
 			Class.forName(driver); // 드라이버 로딩
@@ -27,7 +28,7 @@ public class C01OracleDBConn {
 			int cnt=0; // 자료 개수
 			while(rs.next()) { // next(): 다음 내용이 있으면 true
 				System.out.print(rs.getInt("REGION_ID")+"\t"); // REGION_ID열의 내용을 int형으로 가져옴
-				System.out.println(rs.getString("REGION_NAME")+"\t"); // REGION_ID열의 내용을 int형으로 가져옴
+				System.out.println(rs.getString("REGION_NAME")+"\t"); // REGION_NAME열의 내용을 String형으로 가져옴
 				cnt++;
 			}
 			if(cnt>0) {

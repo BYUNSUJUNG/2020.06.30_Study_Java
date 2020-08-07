@@ -1,0 +1,94 @@
+package Ch33;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.Scanner;
+
+public class C02OracleDBConn {
+	public static void main(String[] args) {
+		
+		Scanner scan = new Scanner(System.in);
+		
+		// DB 연결 정보 저장
+		String driver="oracle.jdbc.driver.OracleDriver";
+		String url="jdbc:oracle:thin:@localhost:1521:XE"; // 1521: 오라클 포트
+		String user="system";
+		String password="12345";
+		
+		
+		String sql; // sql저장용(쿼리 임시저장)
+		PreparedStatement pstmt = null; // sql 명령을 담을 공간 (쿼리 저장) -> 전달
+		ResultSet rs = null; // sql결과를 저장할 용도(쿼리 결과 저장)
+		Connection conn = null; // db연결 객체 참조 값 저장(db연결 객체 저장)
+		
+		String NAME = null;
+		String ADDR = null;
+		int i = 1;
+		
+		try {
+			Class.forName(driver); // 드라이버 로딩
+			System.out.println("-- Driver Loading Success !! --");
+			conn = DriverManager.getConnection(url, user, password); // DB연결 정보 담기
+			System.out.println("--- DB Conected ---");
+			/*
+			// 1. insert
+			System.out.println("------- STDInfo Table에 이름/주소 Insert -------");
+			
+			sql="SELECT * FROM REGIONS"; // REGIONS라는 테이블의 내용을 불러옴
+			
+			
+			while(true) {
+				// 이름 입력
+				System.out.print("이름(q:종료): ");
+				NAME=scan.nextLine();
+				if(NAME.equals("q"))
+					break;
+				// 주소 입력
+				System.out.print("주소(q:종료): ");
+				ADDR=scan.nextLine();
+				if(ADDR.equals("q"))
+					break;
+				// 쿼리
+				pstmt = conn.prepareStatement("INSERT INTO STDInfo VALUES(?,?,?)"); // 미리 입력할 쿼리를 씀
+				pstmt.setInt(1,i);
+				pstmt.setString(2,NAME);
+				pstmt.setString(3,ADDR);
+				i++;
+				pstmt.executeUpdate(); // 쿼리 업데이트
+			}
+			
+			// 2. select
+			System.out.println("------- STDInfo Table에 이름/주소 select -------");
+			
+			sql="SELECT * FROM REGIONS"; // REGIONS라는 테이블의 내용을 불러옴
+			pstmt = conn.prepareStatement(sql); // 쿼리문을 보냄
+			rs = pstmt.executeQuery(); // 쿼리 결과물을 담음
+			
+			while(rs.next()) { // next(): 다음 내용이 있으면 true
+				System.out.print(rs.getInt("NO")+"\t"); // NO열의 내용을 int형으로 가져옴
+				System.out.println(rs.getString("NAME")+"\t"); // NAME열의 내용을 String형으로 가져옴
+				System.out.println(rs.getString("ADDR")+"\t"); // ADDR열의 내용을 String형으로 가져옴
+			}*/
+			
+			// 3. update
+			System.out.println("------- STDInfo Table에 이름/주소 update -------");
+			
+			// 이름 입력
+			System.out.print("이름: ");
+			NAME=scan.nextLine();
+			// 주소 입력
+			System.out.print("변경 주소: ");
+			ADDR=scan.nextLine();
+			// 쿼리
+			pstmt = conn.prepareStatement("UPDATE STDInfo SET ADDR=? WHERE NAME=?"); // 미리 입력할 쿼리를 씀
+			pstmt.setString(1,ADDR);
+			pstmt.setString(2,NAME);
+			pstmt.executeUpdate(); // 쿼리 업데이트
+			
+		} catch(Exception e) {
+			
+		}
+	}
+}
